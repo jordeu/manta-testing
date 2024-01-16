@@ -1,4 +1,5 @@
 process Manta {
+    publishDir 's3://scidev-eu-west-1/projects/robsyme/manta/data/NA12891_S1_50x/'
     container 'quay.io/biocontainers/manta:1.6.0--h9ee0642_1'
     cpus 10
     memory '8GB'
@@ -47,7 +48,7 @@ workflow {
 
     Channel.fromPath(params.input)
     | splitCsv(header: true)
-    | map { row -> [row.subMap('sample'), file(row.bam), file(row.bai)] }
+    | map { row -> [row.sample, file(row.bam), file(row.bai)] }
     | CopyBam
     | toSortedList
     | transpose
