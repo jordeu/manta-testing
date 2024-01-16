@@ -10,7 +10,7 @@ process Manta {
     path(fai)
 
     script:
-    def input_files = input.collect{"--bam ${it}"}.join(' ')
+    def input_files = bams.collect{"--bam ${it}"}.join(' ')
     """
     configManta.py \\
         ${input_files} \\
