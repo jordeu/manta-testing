@@ -4,7 +4,7 @@ process Manta {
     memory '8GB'
 
     input:
-    tuple path(input), path(index)
+    tuple path(input, stageAs: 'sample.*.bam'), path(index, stageAs: 'sample.*.bam.bai')
     path(fasta)
     path(fai)
 
@@ -44,8 +44,7 @@ workflow {
     | map { row -> [file(row.bam), file(row.bai)] }
     | toSortedList
     | transpose
-    | map { [it] }
-    | collect
+    | toSortedList
     | set { bams }
 
     Manta(bams, fasta, fai)
