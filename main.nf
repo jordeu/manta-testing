@@ -36,8 +36,8 @@ process Manta {
 params.input = "${baseDir}/data/samplesheet.aligned.csv"
 
 workflow {
-    fasta = Channel.fromPath("s3://ngi-igenomes/igenomes/Homo_sapiens/GATK/GRCh37/Sequence/WholeGenomeFasta/human_g1k_v37_decoy.fasta")
-    fai = Channel.fromPath("s3://ngi-igenomes/igenomes/Homo_sapiens/GATK/GRCh37/Sequence/WholeGenomeFasta/human_g1k_v37_decoy.fasta.fai")
+    fasta = Channel.fromPath("s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa")
+    fai = Channel.fromPath("s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa.fai")
 
     Channel.fromPath(params.input)
     | splitCsv(header: true)
