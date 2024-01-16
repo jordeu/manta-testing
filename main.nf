@@ -33,6 +33,12 @@ process Manta {
     """
 }
 
+process CopyBam {
+    input: tuple val(id), path(bam), path(bai)
+    output: tuple path("${id}.bam"), path("${id}.bam.bai")
+    script: "cp $bam ${id}.bam && cp $bai ${id}.bam.bai"
+}
+
 params.input = "${baseDir}/data/samplesheet.aligned.csv"
 
 workflow {
@@ -41,7 +47,8 @@ workflow {
 
     Channel.fromPath(params.input)
     | splitCsv(header: true)
-    | map { row -> [file(row.bam), file(row.bai)] }
+    | map { row -> [row.subMap('sample'), file(row.bam), file(row.bai)] }
+    | CopyBam
     | toSortedList
     | transpose
     | toSortedList
