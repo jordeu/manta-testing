@@ -19,17 +19,17 @@ process Manta {
     python manta/runWorkflow.py -m local -j $task.cpus
 
     mv manta/results/variants/candidateSmallIndels.vcf.gz \\
-        ${prefix}.candidate_small_indels.vcf.gz
+        example.candidate_small_indels.vcf.gz
     mv manta/results/variants/candidateSmallIndels.vcf.gz.tbi \\
-        ${prefix}.candidate_small_indels.vcf.gz.tbi
+        example.candidate_small_indels.vcf.gz.tbi
     mv manta/results/variants/candidateSV.vcf.gz \\
-        ${prefix}.candidate_sv.vcf.gz
+        example.candidate_sv.vcf.gz
     mv manta/results/variants/candidateSV.vcf.gz.tbi \\
-        ${prefix}.candidate_sv.vcf.gz.tbi
+        example.candidate_sv.vcf.gz.tbi
     mv manta/results/variants/diploidSV.vcf.gz \\
-        ${prefix}.diploid_sv.vcf.gz
+        example.diploid_sv.vcf.gz
     mv manta/results/variants/diploidSV.vcf.gz.tbi \\
-        ${prefix}.diploid_sv.vcf.gz.tbi
+        example.diploid_sv.vcf.gz.tbi
     """
 }
 
