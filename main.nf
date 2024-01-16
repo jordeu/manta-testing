@@ -1,5 +1,4 @@
 process Manta {
-    publishDir 's3://scidev-eu-west-1/projects/robsyme/manta/data/NA12891_S1_50x/'
     container 'quay.io/biocontainers/manta:1.6.0--h9ee0642_1'
     cpus 10
     memory '8GB'
@@ -40,11 +39,9 @@ process CopyBam {
     script: "cp $bam ${id}.bam && cp $bai ${id}.bam.bai"
 }
 
-params.input = "${baseDir}/data/samplesheet.aligned.csv"
-
 workflow {
-    fasta = Channel.fromPath("s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa")
-    fai = Channel.fromPath("s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa.fai")
+    fasta = Channel.fromPath(params.fasta)
+    fai = Channel.fromPath(params.fai)
 
     Channel.fromPath(params.input)
     | splitCsv(header: true)
