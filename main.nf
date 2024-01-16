@@ -5,7 +5,7 @@ process Manta {
     memory '8GB'
 
     input:
-    tuple path(input), path(index)
+    tuple path(indices), path(bams)
     path(fasta)
     path(fai)
 
