@@ -1,7 +1,7 @@
 process Manta {
     container 'quay.io/biocontainers/manta:1.6.0--h9ee0642_1'
     cpus 10
-    memory '8GB'
+    memory '16GB'
 
     input:
     tuple path(bams), path(indices)
