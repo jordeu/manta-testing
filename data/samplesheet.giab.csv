@@ -1,0 +1,11 @@
+sample,bam,bai
+NA12891.01,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.02,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.03,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.04,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.05,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.06,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.07,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.08,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.09,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
+NA12891.10,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam,s3://giab/technical/platinum_genomes/bams_vcfs_4individules_2013/NA12891_S1_50x.bam.bai
