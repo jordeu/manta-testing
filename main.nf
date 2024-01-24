@@ -36,7 +36,7 @@ process Manta {
 process CopyBam {
     input: tuple val(id), path(bam), path(bai)
     output: tuple path("${id}.bam"), path("${id}.bam.bai")
-    script: "cp $bam ${id}.bam && cp $bai ${id}.bam.bai"
+    script: "ln -s $bam ${id}.bam && ln -s $bai ${id}.bam.bai"
 }
 
 workflow {
